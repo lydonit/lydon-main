@@ -7,10 +7,20 @@ module.exports = {
         'display': ['sans-serif']
       },
       colors: {
-        fg1: '#366c71',
-        fg2: '#2A5357'
+        // Rose-pine
+        // surface: '#fffaf3',
+        // overlay: '#fffaf3',
+        // text: '#575279',
+
+        surface: '#ffffff',
+        overlay: '#ffffff',
+        text: '#000000',
+        primary: '#286983'
+        // primary: '#366c71'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"),
+  ],
 }

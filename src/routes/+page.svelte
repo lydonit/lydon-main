@@ -8,7 +8,6 @@
 	export let data: PageData;
 
 	let descriptions = data.descriptions;
-	console.log(descriptions);
 </script>
 
 <title>Lydon Lab</title>
@@ -26,7 +25,7 @@
 			{/each}
 
 			<a href="/research" class="w-fit">
-				<button class="mt-4 w-fit px-6 py-2 rounded-xl bg-[#366c71] text-white">
+				<button class="mt-4 w-fit px-6 py-2 rounded-xl bg-primary text-white">
 					Learn more
 				</button>
 			</a>

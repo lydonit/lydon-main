@@ -5,19 +5,21 @@
 </script>
 
 <nav
-	class="bg-gradient-to-r from-teal-900 to-emerald-900 text-white bg-opacity-80 backdrop-blur-md sticky top-0 z-50 transition-all"
+	class="sticky top-0 z-50 transition-all bg-gradient-to-r from-teal-900 to-emerald-900 text-white bg-opacity-80 backdrop-blur-md "
 >
 	<div
-		class="py-4 px-6 md:px-20 gap-8 flex flex-row items-center justify-between md:justify-start flex-wrap transition-all"
+		class="py-4 px-6 md:px-28 gap-8 flex flex-row items-center justify-between md:justify-start flex-wrap transition-all"
 	>
 		<div>
 			<a href="/" class="font-bold text-xl">Lydon Lab</a>
 		</div>
 
-		<div class="hidden md:flex flex-row text-base flex-wrap">
+		<div class="hidden md:flex flex-row text-base flex-wrap gap-y-2">
 			<NavItem route="/research" display="Research" />
 			<NavItem route="/publications" display="Publications" />
 			<NavItem route="/lab-members" display="Lab Members" />
+			<NavItem route="/media" display="Media" />
+			<NavItem route="/news" display="News" />
 			<!-- <NavItem route="/poster-presentations" display="Poster Presentations" /> -->
 			<NavItem route="/get-involved" display="Get Involved" />
 			<NavItem route="/contact-us" display="Contact Us" />
@@ -59,6 +61,8 @@
 			<NavItem style="col" route="/research" display="Research" />
 			<NavItem style="col" route="/publications" display="Publications" />
 			<NavItem style="col" route="/lab-members" display="Lab Members" />
+			<NavItem style="col" route="/media" display="Media" />
+			<NavItem style="col" route="/news" display="News" />
 			<NavItem style="col" route="/get-involved" display="Get Involved" />
 			<NavItem style="col" route="/contact-us" display="Contact Us" />
 		</div>

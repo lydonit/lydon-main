@@ -8,6 +8,7 @@ export async function load() {
 			title: string;
 			description: RichTextContent;
 			order: number;
+      profile?: any;
 		}>[];
 
 		research.sort((x, y) => {

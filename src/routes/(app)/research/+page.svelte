@@ -8,6 +8,7 @@
 	export let data: import('./$types').PageData;
 
 	let research = data.research;
+  console.log(research)
 </script>
 
 <title>Research | Lydon Lab</title>
@@ -20,9 +21,14 @@
 
 	<Main>
 		{#each research as entry}
-			<Card title={entry.fields.title}>
-				<RichText rich={entry.fields.description} />
-			</Card>
+      <div class="flex flex-col md:flex-row md:items-center mb-10">
+        {#if entry.fields.profile}
+          <img class="w-40 h-40 mr-8 mb-4 md:mb-0 rounded-md" src={"https://" + entry.fields.profile.fields.file.url.substr(2)} alt={entry.fields.profile.fields.file.url} />
+        {/if}
+        <Card title={entry.fields.title} margin={false}>
+          <RichText rich={entry.fields.description} />
+        </Card>
+      </div>
 		{/each}
 	</Main>
 </div>

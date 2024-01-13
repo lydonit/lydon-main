@@ -5,4 +5,5 @@ export type Pub = {
 	journal: string;
 	authors: string;
 	paperTitle: string;
+  topic?: string;
 };

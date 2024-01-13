@@ -8,7 +8,7 @@
 <div class="flex flex-row mb-8 items-center gap-x-4">
 	<img
 		src={member.fields.profile.fields.file?.url}
-		class="object-cover rounded-lg w-48"
+		class="object-cover w-48"
 		alt="Profile"
 	/>
 	<div>

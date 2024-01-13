@@ -9,7 +9,7 @@
 		{display}
 	</a>
 {:else}
-	<a class="py-2 px-6 hover:bg-fg2 transition font-medium" href={route}>
+	<a class="py-2 px-6 transition font-medium" href={route}>
 		{display}
 	</a>
 {/if}

@@ -7,15 +7,21 @@
 	import Title from 'src/components/Title.svelte';
 	import type { Pub } from 'src/lib/types';
 	import type { PageData } from './$types';
+	import FilterBy from 'src/components/FilterBy.svelte';
 
 	type SortType = 'asc' | 'desc';
 
 	export let data: PageData;
 
+  let checked = false;
+
 	let publications: Entry<Pub>[] = data.pubs;
 	let sortby: SortType = 'desc';
+  let topics = Array.from(new Set(publications.map(x => x.fields.topic).filter(x => x)));
+  console.log(topics)
 
 	$: publications = sorted(publications, sortby);
+  
 
 	function sorted(pubs: Entry<Pub>[], sortby: SortType) {
 		let sorted = pubs.slice().sort((a, b) => {
@@ -42,8 +48,9 @@
 		There are {publications.length} publications written by the Lydon Lab.
 	</Subtitle>
 	<Main>
-		<div class="mb-6 text-gray-600">
+		<div class="mb-6 text-gray-600 flex flex-row gap-x-4 items-center">
 			<SortBy {onclick} {sortby} />
+      <!-- <FilterBy {checked} /> -->
 		</div>
 
 		<div>
