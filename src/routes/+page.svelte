@@ -30,5 +30,10 @@
 				</button>
 			</a>
 		</div>
+
 	</div>
+
+  <div class="absolute bottom-4 italic text-gray-200">
+    Logo designed by Salomé Duhamel
+  </div>
 </Cover>
