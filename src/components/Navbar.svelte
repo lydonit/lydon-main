@@ -28,7 +28,7 @@
         <NavItem route="/lab-members" display="Lab Members" />
         <NavItem route="/media" display="Media" />
         <NavItem route="/news" display="News" />
-        <NavItem route="/blog" display="Blog" />
+        <!-- <NavItem route="/blog" display="Blog" /> -->
         <!-- <NavItem route="/poster-presentations" display="Poster Presentations" /> -->
         <NavItem route="/get-involved" display="Get Involved" />
         <NavItem route="/contact-us" display="Contact Us" />
@@ -73,7 +73,7 @@
 			<NavItem style="col" route="/lab-members" display="Lab Members" />
 			<NavItem style="col" route="/media" display="Media" />
 			<NavItem style="col" route="/news" display="News" />
-			<NavItem style="col" route="/blog" display="Blog" />
+			<!-- <NavItem style="col" route="/blog" display="Blog" /> -->
 			<NavItem style="col" route="/get-involved" display="Get Involved" />
 			<NavItem style="col" route="/contact-us" display="Contact Us" />
 		</div>
