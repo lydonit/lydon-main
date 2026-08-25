@@ -7,3 +7,9 @@ export type Pub = {
 	paperTitle: string;
   topic?: string;
 };
+export type Measure = {
+	measureName: string;
+	citation: string;
+	description: any;
+	link?: string;
+};
