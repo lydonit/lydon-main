@@ -1,3 +1,5 @@
+import type { RichTextContent } from 'contentful';
+
 export type Pub = {
 	title: string;
 	year?: number;
@@ -5,11 +7,12 @@ export type Pub = {
 	journal: string;
 	authors: string;
 	paperTitle: string;
-  topic?: string;
+	topic?: string;
 };
+
 export type Measure = {
 	measureName: string;
 	citation: string;
-	description: any;
+	description: RichTextContent;
 	link?: string;
 };
