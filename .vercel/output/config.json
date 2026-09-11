@@ -1,0 +1,84 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": ".*",
+			"continue": true,
+			"transforms": [
+				{
+					"type": "request.query",
+					"op": "delete",
+					"target": {
+						"key": "__pathname"
+					}
+				}
+			]
+		},
+		{
+			"src": "/_app/immutable/.+",
+			"headers": {
+				"cache-control": "public, immutable, max-age=31536000"
+			}
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "/_app/immutable/.+",
+			"status": 404,
+			"headers": {
+				"cache-control": "no-store"
+			},
+			"continue": false
+		},
+		{
+			"src": "^/?(?:/__data.json)?$",
+			"dest": "/"
+		},
+		{
+			"src": "^/blog/?(?:/__data.json)?$",
+			"dest": "/(app)/blog"
+		},
+		{
+			"src": "^/contact-us/?(?:/__data.json)?$",
+			"dest": "/(app)/contact-us"
+		},
+		{
+			"src": "^/get-involved/?(?:/__data.json)?$",
+			"dest": "/(app)/get-involved"
+		},
+		{
+			"src": "^/lab-members/?(?:/__data.json)?$",
+			"dest": "/(app)/lab-members"
+		},
+		{
+			"src": "^/lab-members/alumni/?(?:/__data.json)?$",
+			"dest": "/(app)/lab-members/alumni"
+		},
+		{
+			"src": "^/media/?(?:/__data.json)?$",
+			"dest": "/(app)/media"
+		},
+		{
+			"src": "^/news/?(?:/__data.json)?$",
+			"dest": "/(app)/news"
+		},
+		{
+			"src": "^/poster-presentations/?(?:/__data.json)?$",
+			"dest": "/(app)/poster-presentations"
+		},
+		{
+			"src": "^/publications/?(?:/__data.json)?$",
+			"dest": "/(app)/publications"
+		},
+		{
+			"src": "^/research/?(?:/__data.json)?$",
+			"dest": "/(app)/research"
+		},
+		{
+			"src": "/.*",
+			"dest": "/![-]/catchall"
+		}
+	],
+	"overrides": {}
+}
