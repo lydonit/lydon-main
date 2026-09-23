@@ -15,4 +15,5 @@ export type Measure = {
 	citation: string;
 	description: RichTextContent;
 	link?: string;
+    measureLink?: string;
 };
