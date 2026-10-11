@@ -3,6 +3,7 @@
 	import type { Measure } from 'src/lib/types';
 	import CopyCitation from './CopyCitation.svelte';
 	import ReadOnline from './ReadOnline.svelte';
+	import AccessMeasure from './AccessMeasure.svelte';
 	import RichText from './RichText.svelte';
 
 	export let entry: Entry<Measure>;
@@ -25,16 +26,7 @@
 	<div class="mt-8 text-gray-800 text-sm flex flex-row gap-x-4">
 		<ReadOnline link={measure.link} />
 		<CopyCitation citation={measure.citation} />
-		<a href={measure.measureLink} target="_blank" rel="noopener noreferrer" class="measure-btn" style="display: inline-flex; align-items: center; gap: 6px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
-            <rect x="2" y="7" width="20" height="10" rx="1.5" />
-            <line x1="6" y1="7" x2="6" y2="11" />
-            <line x1="10" y1="7" x2="10" y2="13" />
-            <line x1="14" y1="7" x2="14" y2="11" />
-            <line x1="18" y1="7" x2="18" y2="13" />
-          </svg>
-          Access Measure
-        </a>
+		<AccessMeasure measure={measure.measureAccess}
 	</div>
 
 
