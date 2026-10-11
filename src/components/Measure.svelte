@@ -26,7 +26,7 @@
 	<div class="mt-8 text-gray-800 text-sm flex flex-row gap-x-4">
 		<ReadOnline link={measure.link} />
 		<CopyCitation citation={measure.citation} />
-		<AccessMeasure measure={measure.measureAccess}
+		<AccessMeasure measure={measure.measureAccess} />
 	</div>
 
 
